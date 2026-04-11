@@ -76,7 +76,7 @@ function Hero() {
             <span className="cursor">|</span>
           </div>
           <p className="hero-tagline">
-            Building scalable web applications with clean UI and strong backend logic.
+            Passionate about building full-stack applications with scalable backend architecture and seamless user experiences.
           </p>
           <div className="hero-buttons">
             <a href="#projects" className="btn btn-primary">
