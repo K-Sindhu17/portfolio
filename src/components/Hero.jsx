@@ -112,8 +112,8 @@ function Hero() {
   name: "Sindhu Kodaboina",
   role: "Full Stack Developer",
   skills: [
-    "Java", "JavaScript",
-    "Angular", "Node.js", "Python"
+    "JavaScript","Angular", 
+    "Node.js", "Python", "Java"
   ],
   passion: "Building scalable full-stack apps",
   available: true
