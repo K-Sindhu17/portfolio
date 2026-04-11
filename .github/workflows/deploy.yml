@@ -51,6 +51,8 @@ jobs:
           SSH_CMD="ssh -o StrictHostKeyChecking=no -i ~/.ssh/ec2_key"
 
           ${SSH_CMD} ${EC2_USER}@${EC2_HOST} "\
+            docker system prune -af && \
+            docker volume prune -f && \
             docker pull ${DOCKER_USER}/portfolio:latest && \
             cd ~/student-app && \
             export DOCKERHUB_USERNAME=${DOCKER_USER} && \
