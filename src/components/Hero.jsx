@@ -2,7 +2,7 @@ import { useState, useEffect, useRef, useCallback } from 'react';
 import { FaArrowRight, FaEnvelope, FaDownload, FaGithub, FaLinkedin } from 'react-icons/fa';
 import './Hero.css';
 
-const roles = ['Full Stack Developer', 'UI Developer', 'Problem Solver', 'Tech Enthusiast'];
+const roles = ['Full Stack Developer', 'Problem Solver', 'Tech Enthusiast'];
 const TYPING_SPEED = 80;
 const DELETING_SPEED = 40;
 const PAUSE_AFTER_TYPING = 2000;
@@ -85,7 +85,7 @@ function Hero() {
             <a href="#contact" className="btn btn-outline">
               <FaEnvelope /> Contact Me
             </a>
-            <a href="/resume.pdf" className="btn btn-secondary" download>
+            <a href="https://drive.google.com/file/d/1MAWD0zze2eiOyTMxOrwpUYC-jwJxSFJ1/view?usp=sharing" className="btn btn-secondary" target="_blank" rel="noopener noreferrer">
               <FaDownload /> Resume
             </a>
           </div>
@@ -115,7 +115,7 @@ function Hero() {
     "JavaScript", "Angular",
     "Node.js", "Python"
   ],
-  passion: "Building great UIs",
+  passion: "Building scalable full-stack apps",
   available: true
 };`}
               </code>

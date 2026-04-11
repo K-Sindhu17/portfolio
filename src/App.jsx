@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import ParticleBackground from './components/ParticleBackground';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
@@ -23,6 +24,7 @@ function App() {
 
   return (
     <div className="app">
+      <ParticleBackground />
       <Navbar theme={theme} toggleTheme={toggleTheme} />
       <Hero />
       <About />

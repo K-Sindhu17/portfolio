@@ -1,3 +1,78 @@
 .app {
   min-height: 100vh;
 }
+
+/* ===== Scroll Reveal System ===== */
+
+/* Section-level reveal */
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.scroll-reveal[data-direction="up"] {
+  transform: translateY(-50px);
+}
+
+.scroll-reveal.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Child items — vertical only */
+.reveal-item {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+[data-direction="up"] .reveal-item {
+  transform: translateY(-40px);
+}
+
+.reveal-item.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Section header */
+.scroll-reveal .section-header {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.scroll-reveal[data-direction="up"] .section-header {
+  transform: translateY(-30px);
+}
+
+.scroll-reveal.revealed .section-header {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Section divider grow */
+.scroll-reveal .section-divider {
+  transform: scaleX(0);
+  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.3s;
+}
+
+.scroll-reveal.revealed .section-divider {
+  transform: scaleX(1);
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .scroll-reveal,
+  .reveal-item,
+  .scroll-reveal .section-header,
+  .scroll-reveal .section-divider {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}

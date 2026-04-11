@@ -1,4 +1,5 @@
 import { FaBriefcase } from 'react-icons/fa';
+import { useScrollReveal } from '../hooks/useScrollReveal';
 import './Experience.css';
 
 const experiences = [
@@ -38,8 +39,9 @@ const experiences = [
 ];
 
 function Experience() {
+  const ref = useScrollReveal();
   return (
-    <section id="experience" className="section">
+    <section id="experience" className="section scroll-reveal" ref={ref}>
       <div className="container">
         <div className="section-header">
           <h2>Experience</h2>
@@ -49,7 +51,7 @@ function Experience() {
 
         <div className="timeline">
           {experiences.map((exp, i) => (
-            <div key={i} className="timeline-item">
+            <div key={i} className="timeline-item reveal-item">
               <div className="timeline-marker">
                 <FaBriefcase />
               </div>

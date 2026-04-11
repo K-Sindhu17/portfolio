@@ -1,4 +1,5 @@
 import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
+import { useScrollReveal } from '../hooks/useScrollReveal';
 import './Projects.css';
 
 const projects = [
@@ -31,8 +32,9 @@ const projects = [
 ];
 
 function Projects() {
+  const ref = useScrollReveal();
   return (
-    <section id="projects" className="section">
+    <section id="projects" className="section scroll-reveal" ref={ref}>
       <div className="container">
         <div className="section-header">
           <h2>Projects</h2>
@@ -42,7 +44,7 @@ function Projects() {
 
         <div className="projects-grid">
           {projects.map((project, i) => (
-            <div key={i} className="project-card">
+            <div key={i} className="project-card reveal-item">
               <div className="project-header">
                 <div className="project-folder">
                   <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">

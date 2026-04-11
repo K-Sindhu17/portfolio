@@ -1,4 +1,5 @@
 import { FaLightbulb, FaPaintBrush, FaServer, FaBug, FaGraduationCap } from 'react-icons/fa';
+import { useScrollReveal } from '../hooks/useScrollReveal';
 import './About.css';
 
 const strengths = [
@@ -9,8 +10,9 @@ const strengths = [
 ];
 
 function About() {
+  const ref = useScrollReveal();
   return (
-    <section id="about" className="section">
+    <section id="about" className="section scroll-reveal" ref={ref}>
       <div className="container">
         <div className="section-header">
           <h2>About Me</h2>
@@ -19,10 +21,10 @@ function About() {
         </div>
 
         <div className="about-content">
-          <div className="about-text">
+          <div className="about-text reveal-item">
             <p className="about-intro">
               I am a passionate Full Stack Developer with hands-on experience in building
-              scalable and user-friendly web applications. I have worked with technologies
+              scalable and user-friendly applications. I have worked with technologies
               like JavaScript, Angular, Node.js, Python, and databases such as MySQL and Redis.
               I enjoy designing intuitive user interfaces, optimizing performance, and solving
               real-world problems through code.
@@ -41,17 +43,17 @@ function About() {
                 <p className="edu-year">Graduated 2023</p>
                 <p className="edu-courses">
                   <strong>Coursework:</strong> Data Structures & Algorithms, Python, DBMS,
-                  Operating Systems, OOPs
+                  Operating Systems, OOPs, Computer Networking
                 </p>
               </div>
             </div>
           </div>
 
-          <div className="about-strengths">
+          <div className="about-strengths reveal-item">
             <h3>Core Strengths</h3>
             <div className="strengths-grid">
               {strengths.map((s, i) => (
-                <div key={i} className="strength-card" style={{ animationDelay: `${i * 0.1}s` }}>
+                <div key={i} className="strength-card reveal-item">
                   <div className="strength-icon">{s.icon}</div>
                   <h4>{s.title}</h4>
                   <p>{s.desc}</p>

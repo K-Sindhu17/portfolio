@@ -6,11 +6,11 @@ function Footer() {
     <footer className="footer">
       <div className="container">
         <div className="footer-content">
-          <div className="footer-logo">
-            <span className="logo-bracket">&lt;</span>
-            SK
-            <span className="logo-bracket"> /&gt;</span>
-          </div>
+          {/* <div className="footer-logo"> */}
+            {/* <span className="logo-bracket">&lt;</span> */}
+            {/* Sindhu Kodaboina */}
+            {/* <span className="logo-bracket"> /&gt;</span> */}
+          {/* </div> */}
           <div className="footer-socials">
             <a href="https://github.com/K-Sindhu17" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
               <FaGithub />

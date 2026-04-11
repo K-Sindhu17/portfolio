@@ -1,4 +1,5 @@
 import { FaEnvelope, FaPhone, FaGithub, FaLinkedin, FaPaperPlane } from 'react-icons/fa';
+import { useScrollReveal } from '../hooks/useScrollReveal';
 import './Contact.css';
 
 const contactInfo = [
@@ -29,8 +30,9 @@ const contactInfo = [
 ];
 
 function Contact() {
+  const ref = useScrollReveal();
   return (
-    <section id="contact" className="section">
+    <section id="contact" className="section scroll-reveal" ref={ref}>
       <div className="container">
         <div className="section-header">
           <h2>Get In Touch</h2>
@@ -39,7 +41,7 @@ function Contact() {
         </div>
 
         <div className="contact-content">
-          <div className="contact-info">
+          <div className="contact-info reveal-item">
             <h3>Let's Connect</h3>
             <p>
               I'm always open to new opportunities, collaborations, and interesting projects.
@@ -58,7 +60,7 @@ function Contact() {
             </div>
           </div>
 
-          <form className="contact-form" onSubmit={(e) => e.preventDefault()}>
+          <form className="contact-form reveal-item" onSubmit={(e) => e.preventDefault()}>
             <div className="form-group">
               <label htmlFor="name">Name</label>
               <input type="text" id="name" placeholder="Your name" />
