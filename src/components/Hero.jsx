@@ -2,7 +2,7 @@ import { useState, useEffect, useRef, useCallback } from 'react';
 import { FaArrowRight, FaEnvelope, FaDownload, FaGithub, FaLinkedin } from 'react-icons/fa';
 import './Hero.css';
 
-const roles = ['Full Stack Developer', 'Problem Solver', 'Tech Enthusiast'];
+const roles = ['Software Engineer', 'Frontend Developer', 'Full Stack Developer', 'Problem Solver', 'Tech Enthusiast'];
 const TYPING_SPEED = 80;
 const DELETING_SPEED = 40;
 const PAUSE_AFTER_TYPING = 2000;
@@ -110,10 +110,13 @@ function Hero() {
               <code>
 {`const developer = {
   name: "Sindhu Kodaboina",
-  role: "Full Stack Developer",
+  role: "Software Engineer | Frontend | Full Stack",
   skills: [
-    "JavaScript","Angular", 
-    "Node.js", "Python", "Java"
+    "JavaScript", "Angular",
+    "Node.js", "Python", "Java",
+    "Data Structures & Algorithms",
+    "OOPs", "DBMS", "MySQL",
+    "Docker", "CI/CD", "Unit Testing"
   ],
   passion: "Building scalable full-stack apps",
   available: true
